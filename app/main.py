@@ -8,11 +8,13 @@ from app.api.customer_product import router as customer_product_router
 from app.api.follow_up import router as follow_up_router
 from app.api.report import router as report_router
 from app.api.staff import router as staff_router
+from app.api.dashboard import router as dashboard_router
 
 from app.models.customer import Customer
 from app.models.product import Product
 from app.models.customer_product import CustomerProduct
 from app.models.customer_follow_up import CustomerFollowUp
+from app.models.user import User
 
 from app.core.database import engine, Base
 
@@ -34,3 +36,4 @@ app.include_router(customer_product_router)
 app.include_router(follow_up_router)
 app.include_router(report_router)
 app.include_router(staff_router)
+app.include_router(dashboard_router)
